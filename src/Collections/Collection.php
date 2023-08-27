@@ -20,7 +20,7 @@ class Collection
         return new static($list);
     }
 
-    public function filter(callable $predicate): array
+    public function filter(callable $predicate): self
     {
         $filteredItems = [];
         foreach ($this->list as $key => $value) {
@@ -28,6 +28,18 @@ class Collection
                 $filteredItems[] = $value;
             }
         }
-        return $filteredItems;
+        $this->list = $filteredItems;
+        return $this;
+    }
+
+    public function map(callable $fn): self
+    {
+        $this->list = array_map($fn, $this->list);
+        return $this;
+    }
+
+    public function get(): array
+    {
+        return $this->list;
     }
 }
