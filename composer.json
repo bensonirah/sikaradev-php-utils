@@ -1,0 +1,22 @@
+{
+    "name": "sikaradev-php-utils/helper",
+    "description": "A php library for daily usage",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "SikaradevPhpUtils\\Helper\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "bensonirah",
+            "email": "bensonirah@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require-dev": {
+        "symfony/var-dumper": "^5.4",
+        "phpunit/phpunit": "^9.6"
+    }
+}
