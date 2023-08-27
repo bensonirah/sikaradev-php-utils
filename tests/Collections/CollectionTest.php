@@ -1,8 +1,9 @@
 <?php
 
-namespace SikaradevPhpUtils\Helper\Collections;
+namespace SikaradevPhpUtils\Helper\Test\Collections;
 
 use PHPUnit\Framework\TestCase;
+use SikaradevPhpUtils\Helper\Collections\Collection;
 
 class CollectionTest extends TestCase
 {

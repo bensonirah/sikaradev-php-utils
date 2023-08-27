@@ -8,6 +8,11 @@
             "SikaradevPhpUtils\\Helper\\": "src/"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "SikaradevPhpUtils\\Helper\\Test\\": "tests/"
+        }
+    },
     "authors": [
         {
             "name": "bensonirah",
