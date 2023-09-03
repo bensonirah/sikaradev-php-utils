@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace SikaradevPhpUtils\Helper\Collections;
+namespace SikaradevPhpUtils\Collections;
 
 class Collection
 {
@@ -35,6 +35,17 @@ class Collection
     public function map(callable $fn): self
     {
         $this->list = array_map($fn, $this->list);
+        return $this;
+    }
+
+    /**
+     * @param callable $fn
+     * @param mixed $initial
+     * @return $this
+     */
+    public function reduce(callable $fn, $initial = null): self
+    {
+        $this->list = array_reduce($this->list, $fn, $initial);
         return $this;
     }
 

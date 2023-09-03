@@ -5,12 +5,12 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "SikaradevPhpUtils\\Helper\\": "src/"
+            "SikaradevPhpUtils\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "SikaradevPhpUtils\\Helper\\Test\\": "tests/"
+            "SikaradevPhpUtils\\Test\\": "tests/"
         }
     },
     "authors": [
@@ -23,5 +23,10 @@
     "require-dev": {
         "symfony/var-dumper": "^5.4",
         "phpunit/phpunit": "^9.6"
+    },
+    "require": {
+        "symfony/dom-crawler": "^5.4",
+        "symfony/css-selector": "^5.4",
+        "league/pipeline": "^1.0"
     }
 }
