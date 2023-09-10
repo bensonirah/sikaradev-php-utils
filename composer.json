@@ -1,32 +1,34 @@
 {
-    "name": "sikaradev-php-utils/helper",
-    "description": "A php library for daily usage",
-    "type": "library",
-    "license": "MIT",
-    "autoload": {
-        "psr-4": {
-            "SikaradevPhpUtils\\": "src/"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "SikaradevPhpUtils\\Test\\": "tests/"
-        }
-    },
-    "authors": [
-        {
-            "name": "bensonirah",
-            "email": "bensonirah@gmail.com"
-        }
-    ],
-    "minimum-stability": "stable",
-    "require-dev": {
-        "symfony/var-dumper": "^5.4",
-        "phpunit/phpunit": "^9.6"
-    },
-    "require": {
-        "symfony/dom-crawler": "^5.4",
-        "symfony/css-selector": "^5.4",
-        "league/pipeline": "^1.0"
+  "name": "sikaradev-php-utils/helper",
+  "description": "A php library for daily usage",
+  "type": "library",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "SikaradevPhpUtils\\": "src/"
     }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "SikaradevPhpUtils\\Test\\": "tests/"
+    }
+  },
+  "authors": [
+    {
+      "name": "bensonirah",
+      "email": "bensonirah@gmail.com"
+    }
+  ],
+  "minimum-stability": "stable",
+  "require-dev": {
+    "symfony/var-dumper": "^5.4",
+    "phpunit/phpunit": "^9.6"
+  },
+  "require": {
+    "symfony/dom-crawler": "^5.4",
+    "symfony/css-selector": "^5.4",
+    "league/pipeline": "^1.0",
+    "guzzlehttp/guzzle": "^7.0",
+    "ext-json": "*"
+  }
 }

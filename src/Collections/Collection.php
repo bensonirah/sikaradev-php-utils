@@ -53,4 +53,32 @@ class Collection
     {
         return $this->list;
     }
+
+    public function count(): int
+    {
+        return count($this->list);
+    }
+
+    /**
+     * @param int $offset
+     * @return $this
+     */
+    public function skip(int $offset): self
+    {
+        $this->list = array_slice($this->list, $offset);
+        return $this;
+    }
+
+    public function take(int $length): self
+    {
+        $this->list = array_slice($this->list, 0, $length);
+        return $this;
+    }
+
+    public function asGenerator(): \Generator
+    {
+        foreach ($this->list as $item) {
+            yield $item;
+        }
+    }
 }
