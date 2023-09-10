@@ -29,6 +29,7 @@
     "symfony/css-selector": "^5.4",
     "league/pipeline": "^1.0",
     "guzzlehttp/guzzle": "^7.0",
-    "ext-json": "*"
+    "ext-json": "*",
+    "ext-redis": "*"
   }
 }
