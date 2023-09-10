@@ -6,6 +6,7 @@ namespace SikaradevPhpUtils\Collections;
 class Collection
 {
     private array $list;
+    private int $lenght;
 
     /**
      * @param array $list
@@ -13,6 +14,7 @@ class Collection
     public function __construct(array $list)
     {
         $this->list = $list;
+        $this->lenght = count($list);
     }
 
     public static function of(array $list): self
@@ -29,6 +31,7 @@ class Collection
             }
         }
         $this->list = $filteredItems;
+
         return $this;
     }
 
@@ -80,5 +83,14 @@ class Collection
         foreach ($this->list as $item) {
             yield $item;
         }
+    }
+
+    /**
+     * @return array
+     */
+    public function draw(): array
+    {
+        $index = mt_rand(0, $this->lenght - 1);
+        return ['index' => $index, 'item' => $this->list[$index]];
     }
 }
