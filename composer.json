@@ -4,6 +4,7 @@
   "type": "library",
   "license": "MIT",
   "autoload": {
+    "files": ["src/Resources/functions/typeof.php"],
     "psr-4": {
       "SikaradevPhpUtils\\": "src/"
     }
