@@ -4,7 +4,6 @@ namespace SikaradevPhpUtils\Parseur\Website;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
-use SikaradevPhpUtils\Collections\Collection;
 use Symfony\Component\DomCrawler\Crawler;
 
 final class UrlProcessor implements UrlProcessorInterface

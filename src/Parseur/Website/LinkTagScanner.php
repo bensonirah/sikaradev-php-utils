@@ -12,8 +12,9 @@ final class LinkTagScanner implements ScannerInterface
     {
         $items = $htmlNode->filter('a')
             ->each(fn(Crawler $node, int $id) => $node->attr('href'));
+
         return Collection::of($items)
-            ->filter(fn(int $k, string $v) => !in_array($v, ['#', '/']))
+            ->filter(fn(int $k, ?string $v) => !in_array($v, ['#', '/', null]))
             ->get();
     }
 }

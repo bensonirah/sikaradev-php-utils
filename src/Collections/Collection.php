@@ -43,10 +43,10 @@ class Collection
 
     /**
      * @param callable $fn
-     * @param mixed $initial
+     * @param mixed|null $initial
      * @return $this
      */
-    public function reduce(callable $fn, $initial = null): self
+    public function reduce(callable $fn, mixed $initial = null): self
     {
         $this->list = array_reduce($this->list, $fn, $initial);
         return $this;
