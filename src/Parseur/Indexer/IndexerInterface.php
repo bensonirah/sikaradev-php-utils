@@ -2,7 +2,13 @@
 
 namespace SikaradevPhpUtils\Parseur\Indexer;
 
+use Symfony\Component\DomCrawler\Crawler;
+
 interface IndexerInterface
 {
-	public function visualize(string $url);
+    /**
+     * @param Crawler $crawler
+     * @return array<ProductResponse>
+     */
+    public function visualize(Crawler $crawler): array;
 }
