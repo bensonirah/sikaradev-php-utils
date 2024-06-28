@@ -8,13 +8,13 @@ use Symfony\Component\DomCrawler\Crawler;
 final class WithMetaDataIndexer extends IndexerDecorator
 {
 
-    public function visualize(Crawler $crawler): array
-    {
-        return array_map(
-            fn(ProductResponse $productResponse) => $productResponse->withMetaData(
-                UrlProcessor::metaTag($productResponse->permalink)
-            ),
-            $this->indexer->visualize($crawler)
-        );
-    }
+	public function visualize(Crawler $crawler): array
+	{
+		return array_map(
+			fn(ProductResponse $productResponse) => $productResponse->withMetaData(
+				KiboMetaDataView::fromArray(UrlProcessor::metaTag($productResponse->permalink))
+			),
+			$this->indexer->visualize($crawler)
+		);
+	}
 }
