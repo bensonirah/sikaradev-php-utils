@@ -2,14 +2,14 @@
 
 namespace SikaradevPhpUtils\Parseur\Indexer;
 
-final  class  KiboMetaDataView implements MetaDataViewInterface
+final  readonly class  KiboMetaDataView implements MetaDataViewInterface
 {
 	public function __construct(
-		private readonly string $description,
-		private readonly string $keywords,
-		private readonly string $title,
-		private readonly string $url,
-		private readonly string $image
+		private string $description,
+		private string $keywords,
+		private string $title,
+		private string $url,
+		private string $image
 	) {}
 
 	public static function fromArray(array $metaTag): MetaDataViewInterface
