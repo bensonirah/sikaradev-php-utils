@@ -50,7 +50,12 @@ class Collection
      */
     public function reduce(callable $fn, mixed $initial = null): self
     {
-        $this->list = array_reduce($this->list, $fn, $initial);
+		$reduced = array_reduce($this->list, $fn, $initial);
+		if (is_array($reduced)) {
+			$this->list = $reduced;
+		}else {
+			$this->list = [$reduced];
+		}
         return $this;
     }
 
@@ -58,7 +63,10 @@ class Collection
     {
         return $this->list;
     }
-
+	public function join(string $separator=''): string
+	{
+		return join($separator, $this->list);
+	}
     public function count(): int
     {
         return count($this->list);
