@@ -2,10 +2,22 @@
 
 namespace SikaradevPhpUtils\Parseur\Network;
 
+use GuzzleHttp\Client;
+
 final class Ping
 {
-	public function health(string $url): int
+	private Client $client;
+
+	public function __construct()
 	{
-		return 0;
+		$this->client = new Client();
+	}
+
+	/**
+	 * @throws \GuzzleHttp\Exception\GuzzleException
+	 */
+	public function health(string $url): bool
+	{
+		return $this->client->get($url)->getStatusCode() === 200;
 	}
 }
