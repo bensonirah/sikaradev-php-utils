@@ -3,6 +3,7 @@
 namespace SikaradevPhpUtils\Parseur\Network;
 
 use GuzzleHttp\Client;
+use GuzzleHttp\Exception\GuzzleException;
 
 final class Ping
 {
@@ -14,7 +15,7 @@ final class Ping
 	}
 
 	/**
-	 * @throws \GuzzleHttp\Exception\GuzzleException
+	 * @throws GuzzleException
 	 */
 	public function health(string $url): bool
 	{

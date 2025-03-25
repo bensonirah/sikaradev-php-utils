@@ -7,11 +7,6 @@ use SikaradevPhpUtils\Url\Url;
 
 final class BasefyUrlProcessor extends UrlProcessorDecorator
 {
-	public function __construct(UrlProcessorInterface $processor)
-	{
-		parent::__construct($processor);
-	}
-
 	public function scan(string $url): array
 	{
 		$items = $this->processor->scan($url);

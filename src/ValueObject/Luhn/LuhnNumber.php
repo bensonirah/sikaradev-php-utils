@@ -7,7 +7,7 @@ final class LuhnNumber
 	private string $number;
 
 	/**
-	 * @throws \SikaradevPhpUtils\ValueObject\Luhn\InvalidLuhnNumberException
+	 * @throws InvalidLuhnNumberException
 	 */
 	public function __construct(string $serialNumber)
 	{
@@ -39,7 +39,7 @@ final class LuhnNumber
 
 	/**
 	 *  Validate if the serie of digit follow the luhn specification
-	 * @throws \SikaradevPhpUtils\ValueObject\Luhn\InvalidLuhnNumberException
+	 * @throws InvalidLuhnNumberException
 	 */
 	private function validate(array $digits): void
 	{

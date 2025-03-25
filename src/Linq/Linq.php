@@ -20,8 +20,7 @@ final class Linq
 
     public static function from(array $items): self
     {
-        $instance = new static($items);
-        return $instance;
+        return new Linq($items);
     }
 
     public function select(string ...$columns): self
@@ -56,7 +55,6 @@ final class Linq
                 ['nbReponseP1' => 0, 'nbReponseP2' => 0]
             );
         }
-        dump($aggregate);
         return $this;
     }
 

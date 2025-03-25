@@ -11,9 +11,9 @@ abstract class AbstractConsoleHistory
         }
     }
 
-    protected abstract function path(): string;
+    abstract  protected  function path(): string;
 
-    public abstract function contents(): array;
+    abstract  public function contents(): array;
 
     public function __toString(): string
     {

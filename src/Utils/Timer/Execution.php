@@ -4,8 +4,6 @@ namespace SikaradevPhpUtils\Utils\Timer;
 
 class Execution
 {
-// Execution::time(fn() => range(10, 9999))->then(fn(float $time) => dump($time))
-//
 	private function __construct(private mixed $result, private float $time) {}
 
 	public static function time(callable $fn): Execution

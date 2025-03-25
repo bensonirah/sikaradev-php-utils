@@ -23,7 +23,7 @@ final class ZshConsoleHistory extends AbstractConsoleHistory
                 $dateTime = new \DateTime();
                 $dateTime->setTimestamp((int)$eventTime);
                 return [
-                    'command' => preg_replace('/\n/', '', $command),
+                    'command' => str_replace('/\n/', '', $command),
                     'executionTime' => (int)$eventTime,
                     'dateTime' => $dateTime->format('Y-m-d H:i:s')
                 ];

@@ -6,20 +6,12 @@ use SikaradevPhpUtils\Collections\Collection;
 
 final class Console
 {
-    public function __construct()
-    {
-    }
-
-    public static function table(array $elements)
-    {
-        dump($elements);
-    }
 
     public static function last(): Collection
     {
         $command = shell_exec('last $(whoami) -w --time-format iso -R | grep tty2');
 
-        $content = preg_replace('/\n/', '|', $command);
+        $content = str_replace('/\n/', '|', $command);
         $items = explode('|', $content);
         return Collection::of($items)
             ->filter(fn(int $index, string $value) => $value != '')
